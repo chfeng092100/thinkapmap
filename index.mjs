@@ -5,5 +5,7 @@ function required(event) {
     var pnInput = document.getElementById("userphonenumber").value
     localStorage.setItem('username', nameInput)
     localStorage.setItem('userPhoneNumber', pnInput)
+
+
     return window.location.assign('/game.html')
 }
