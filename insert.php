@@ -6,7 +6,7 @@ if (!empty($name) || !empty($pn)){
     $host = 'localhost';
     $dbUsername = 'root';
     $dbPassword = '';
-    $dbName = 'thinkapmap';
+    $dbName = 'register';
 
     // create connection
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbName);
@@ -14,7 +14,7 @@ if (!empty($name) || !empty($pn)){
         die('Connection Failed  : ' . $conn->connect_error);
     }
     else {
-        $stmt = $conn->prepare('insert into register(name, pn) values(?, ?)');
+        $stmt = $conn->prepare('insert into thinkapmap(name, pn) values(?, ?)');
         $stmt->bind_param('si', $name, $pn);
         $stmt->execute();
         echo 'success';
